@@ -46,6 +46,12 @@ function displayCharacters () {
 }
 
 // Function to filter characters by house
+function filterByHouse(house: House) {
+  const filtered = characters.filter(character => {
+    return character.house === house
+  })
+  return filtered
+}
 
 // Function to count wizards vs muggles
 
@@ -82,8 +88,8 @@ addCharacter({
 displayCharacters()
 
 // Filter by house
-// console.log("\n Characters from Gryffindor:");
-// console.log(filterByHouse(House.Gryffindor));
+console.log("\n Characters from Gryffindor:");
+console.log(filterByHouse(House.Gryffindor));
 
 // Magical status summary
 // const summary = countByMagicalStatus();
