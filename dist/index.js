@@ -34,6 +34,14 @@ function filterByHouse(house) {
     return filtered;
 }
 // Function to count wizards vs muggles
+function countByMagicalStatus() {
+    const wizards = characters.filter(character => character.isWizard);
+    const summary = {
+        wizards: wizards.length,
+        muggles: characters.length - wizards.length
+    };
+    return summary;
+}
 // Sample data
 addCharacter({
     name: "Harry Potter",
@@ -65,5 +73,5 @@ displayCharacters();
 console.log("\n Characters from Gryffindor:");
 console.log(filterByHouse(House.Gryffindor));
 // Magical status summary
-// const summary = countByMagicalStatus();
-// console.log(`\n Wizards: ${summary.wizards}, Muggles: ${summary.muggles}`);
+const summary = countByMagicalStatus();
+console.log(`\n Wizards: ${summary.wizards}, Muggles: ${summary.muggles}`);
