@@ -1,10 +1,21 @@
 // Type definition for wand using tuple
-
+type Wand = [core: string, length: number, material: string]
+ 
 // Enum for house names
-
+enum House {
+  Gryffindor = 'Gryffindor',
+  Slytherin = 'Slytherin'
+}
 
 // Type for character
-
+interface Character {
+  name: string
+  age: number
+  isWizard: boolean
+  house: House
+  spells: string[]
+  wand: Wand
+}
 
 // Array to store all characters
 
